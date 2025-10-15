@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Calculator App</h1>
+    </header>
+    <main>
+        <section class="calculator">
+            <input type="number" id="num1" aria-label="First number" placeholder="Enter first number">
+            <input type="number" id="num2" aria-label="Second number" placeholder="Enter second number">
+            <div>
+                <button class="calc-add" aria-label="Add">+</button>
+                <button class="calc-sub" aria-label="Subtract">−</button>
+                <button class="calc-mul" aria-label="Multiply">×</button>
+                <button class="calc-div" aria-label="Divide">÷</button>
+            </div>
+            <div id="result" class="result" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer> 
+        <small>&copy; 2023 Simple Calculator App</small>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
