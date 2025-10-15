@@ -45,5 +45,21 @@ function calculate(operation) {
             result = 'Invalid operation.';
     }
 
-    document.getElementById('result').textContent = 'Result: ' + result;
+    // Display result with animation
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = 'Result: ' + result;
+    resultDiv.classList.add('calc-result-anim');
+    setTimeout(() => resultDiv.classList.remove('calc-result-anim'), 1000);
+
+    // Add result to history
+    addToHistory(num1, num2, operation, result);
+}
+
+function addToHistory(num1, num2, operation, result) {
+    const historyList = document.getElementById('history');
+    const operationSymbol = operation === 'add' ? '+' : operation === 'sub' ? '-' : operation === 'mul' ? '×' : '÷';
+    const historyItem = document.createElement('li');
+    historyItem.className = 'list-group-item';
+    historyItem.textContent = `${num1} ${operationSymbol} ${num2} = ${result}`;
+    historyList.appendChild(historyItem);
 }
