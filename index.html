@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Simple Calculator App</h1>
     </header>
     <main>
-        <section class="calculator">
-            <input type="number" id="num1" aria-label="First number" placeholder="Enter first number">
-            <input type="number" id="num2" aria-label="Second number" placeholder="Enter second number">
-            <div>
-                <button class="calc-add" aria-label="Add">+</button>
-                <button class="calc-sub" aria-label="Subtract">−</button>
-                <button class="calc-mul" aria-label="Multiply">×</button>
-                <button class="calc-div" aria-label="Divide">÷</button>
+        <section class="calculator container mt-5">
+            <input type="number" id="num1" aria-label="First number" placeholder="Enter first number" class="form-control mb-2">
+            <input type="number" id="num2" aria-label="Second number" placeholder="Enter second number" class="form-control mb-2">
+            <div class="mb-3">
+                <button class="calc-add btn btn-success" aria-label="Add">+</button>
+                <button class="calc-sub btn btn-danger" aria-label="Subtract">−</button>
+                <button class="calc-mul btn btn-warning" aria-label="Multiply">×</button>
+                <button class="calc-div btn btn-info" aria-label="Divide">÷</button>
             </div>
-            <div id="result" class="result" aria-live="polite"></div>
+            <div id="result" class="result mb-3" aria-live="polite"></div>
+            <div class="calc-history">
+                <h2>Calculation History</h2>
+                <ul id="history" class="list-group"></ul>
+            </div>
         </section>
     </main>
-    <footer> 
+    <footer>
         <small>&copy; 2023 Simple Calculator App</small>
     </footer>
     <script src="main.js"></script>
